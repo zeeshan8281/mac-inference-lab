@@ -1,0 +1,37 @@
+{
+  "composition": "MacInferenceDashboard",
+  "run": "pilot-002",
+  "width": 1440,
+  "height": 1080,
+  "frames": 480,
+  "fps": 30,
+  "duration_seconds": 16,
+  "codec": "h264",
+  "pixel_format": "yuv420p",
+  "audio_streams": 0,
+  "poster_frame": 450,
+  "renderer": "Remotion 4.0.543",
+  "browser": "Chrome 158.0.8127.37",
+  "gl": "swangle",
+  "intermediate_images": "png",
+  "max_footer_mean_pixel_error": 0.7580050505050505,
+  "max_final_hold_mean_pixel_error": 0.6125396519204389,
+  "checks": {
+    "typescript": "PASS",
+    "all_frames_decoded": "PASS",
+    "frozen_source_hashes": "PASS",
+    "static_footer_all_frames": "PASS",
+    "final_hold_matches_poster": "PASS",
+    "visual_review": "PASS: frames 0, 90, 180, 270, 360, 450"
+  },
+  "artifacts": {
+    "mac-inference-dashboard.mp4": {
+      "bytes": 917601,
+      "sha256": "725041876652501cc8f13d6111400de31055266348396609e95c60ba3f0007e2"
+    },
+    "mac-inference-dashboard.png": {
+      "bytes": 468905,
+      "sha256": "39ed9ae1eff5f4f3d2e0fe4a483ffeedd90f7f301e981832dd64246fe50dab7c"
+    }
+  }
+}

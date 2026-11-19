@@ -1,0 +1,94 @@
+{
+  "run": "pilot-002",
+  "source_sha256": {
+    "runs/pilot-002/summary.json": "3362893fab126c949b46b0288c18ec28df873cbc7e57817b164b683d6c059a66",
+    "runs/pilot-002/SECONDARY_ANALYSIS.json": "9fe18aa58bf02d24abe3f0171561fdbc7736cfbea25c3b7c8e26ef092de1aa25",
+    "runs/pilot-002/environment.json": "4a961d34c275a8c1cce1fd755923a8592053565cdbe2a2028f02027f9127dc9f"
+  },
+  "hardware": {
+    "chip": "M5 Pro",
+    "memory_gib": 48.0,
+    "mlx_lm": "0.32.2"
+  },
+  "model": "Qwen2.5-Coder 7B",
+  "weight_bits": 4,
+  "total_model_requests": 374,
+  "configs": 6,
+  "paired_result": {
+    "blocks": 32,
+    "fixed_mean_goodput": 33.42784448772311,
+    "adaptive_mean_goodput": 34.63839593182914,
+    "difference_goodput": 1.2105514441060308,
+    "relative_change_percent": 3.621386489788847,
+    "difference_95ci": [
+      -0.27207736455051507,
+      2.7209418189687797
+    ],
+    "scope": "Exploratory stratified paired bootstrap over controlled workload blocks; not a claim about arbitrary workloads."
+  },
+  "test_unique_prompts": 80,
+  "test_executions": 160,
+  "correct": {
+    "fixed": 77,
+    "adaptive": 77
+  },
+  "on_time_correct": {
+    "fixed": 76,
+    "adaptive": 76
+  },
+  "solo_short": {
+    "fixed": {
+      "episodes": 8,
+      "requests": 8,
+      "correct": 8,
+      "on_time_correct": 8,
+      "mean_goodput_per_min": 33.530862835042925,
+      "mean_completion_s": 1.780069270875174,
+      "mean_ttft_s": 0.3828706196272833,
+      "peak_active_gib": 5.1973946914076805
+    },
+    "adaptive": {
+      "episodes": 8,
+      "requests": 8,
+      "correct": 8,
+      "on_time_correct": 8,
+      "mean_goodput_per_min": 37.86110345474077,
+      "mean_completion_s": 1.5957705156270094,
+      "mean_ttft_s": 0.4343782604992157,
+      "peak_active_gib": 5.310524761676788
+    }
+  },
+  "calibration": {
+    "kv4": {
+      "correct": 0,
+      "requests": 30
+    },
+    "batch4_chunk256": {
+      "correct": 28,
+      "requests": 30
+    },
+    "draft2": {
+      "correct": 28,
+      "requests": 30
+    },
+    "batch4_chunk1024": {
+      "correct": 28,
+      "requests": 30
+    },
+    "kv8": {
+      "correct": 28,
+      "requests": 30
+    },
+    "serial": {
+      "correct": 28,
+      "requests": 30
+    }
+  },
+  "policy_choices": {
+    "burst_long": "batch4_chunk256",
+    "burst_short": "batch4_chunk256",
+    "solo_long": "batch4_chunk256",
+    "solo_short": "draft2"
+  },
+  "best_fixed": "batch4_chunk256"
+}

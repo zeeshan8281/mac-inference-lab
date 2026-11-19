@@ -8,6 +8,12 @@ The first version selects an execution configuration **between drained batches**
 
 ![Held-out result graph](runs/pilot-002/comparison.png)
 
+## Animated dashboard
+
+[Watch the silent 16-second MP4](media/mac-inference-dashboard.mp4) · [Full-resolution PNG](media/mac-inference-dashboard.png) · [Editable Remotion source and render instructions](video/)
+
+The animation visualizes the same saved pilot results, including the inconclusive overall difference, short-request latency tradeoff and calibration quality gate. It is 1440 × 1080 at 30 fps, with no audio or narration.
+
 ## Install on another Apple silicon Mac
 
 The measured environment uses Python 3.12 and the exact versions in `requirements-lock.txt`. MLX GPU execution requires a supported Apple silicon/macOS environment. Other machines can inspect results and run the pure Python audit.
