@@ -1,0 +1,300 @@
+{
+  "schema_version": 1,
+  "training_phase": "calibration",
+  "features": [
+    "queue_count",
+    "max_prompt_tokens"
+  ],
+  "choices": {
+    "burst_long": "batch4_chunk256",
+    "burst_short": "batch4_chunk256",
+    "solo_long": "batch4_chunk256",
+    "solo_short": "draft2"
+  },
+  "best_fixed": "batch4_chunk256",
+  "table": {
+    "burst_long": {
+      "serial": {
+        "accuracy": 0.9166666666666666,
+        "goodput_per_min": 20.14793464339315,
+        "mean_completion_s": 6.285322545246648,
+        "peak_active_gib": 5.479371085762978,
+        "samples": 3,
+        "max_prompt_tokens": 2795,
+        "max_queue": 4,
+        "errors": 0
+      },
+      "kv8": {
+        "accuracy": 0.9166666666666666,
+        "goodput_per_min": 19.657351625947996,
+        "mean_completion_s": 6.428732656079471,
+        "peak_active_gib": 5.687386617064476,
+        "samples": 3,
+        "max_prompt_tokens": 2795,
+        "max_queue": 4,
+        "errors": 0
+      },
+      "kv4": {
+        "accuracy": 0.0,
+        "goodput_per_min": 0.0,
+        "mean_completion_s": 10.890605906166456,
+        "peak_active_gib": 5.644662007689476,
+        "samples": 3,
+        "max_prompt_tokens": 2795,
+        "max_queue": 4,
+        "errors": 0
+      },
+      "draft2": {
+        "accuracy": 0.9166666666666666,
+        "goodput_per_min": 21.14994811930003,
+        "mean_completion_s": 5.87811373949565,
+        "peak_active_gib": 5.565700612962246,
+        "samples": 3,
+        "max_prompt_tokens": 2795,
+        "max_queue": 4,
+        "errors": 0
+      },
+      "batch4_chunk256": {
+        "accuracy": 0.9166666666666666,
+        "goodput_per_min": 28.590444790202834,
+        "mean_completion_s": 7.595898874832831,
+        "peak_active_gib": 5.9917554538697,
+        "samples": 3,
+        "max_prompt_tokens": 2795,
+        "max_queue": 4,
+        "errors": 0
+      },
+      "batch4_chunk1024": {
+        "accuracy": 0.9166666666666666,
+        "goodput_per_min": 26.414053238444016,
+        "mean_completion_s": 8.310070666831356,
+        "peak_active_gib": 5.991753062233329,
+        "samples": 3,
+        "max_prompt_tokens": 2795,
+        "max_queue": 4,
+        "errors": 0
+      }
+    },
+    "burst_short": {
+      "serial": {
+        "accuracy": 1.0,
+        "goodput_per_min": 35.365746890537515,
+        "mean_completion_s": 4.2484308265811705,
+        "peak_active_gib": 5.284171957522631,
+        "samples": 3,
+        "max_prompt_tokens": 319,
+        "max_queue": 4,
+        "errors": 0
+      },
+      "kv8": {
+        "accuracy": 1.0,
+        "goodput_per_min": 34.85787556043224,
+        "mean_completion_s": 4.299609434247638,
+        "peak_active_gib": 5.284171957522631,
+        "samples": 3,
+        "max_prompt_tokens": 319,
+        "max_queue": 4,
+        "errors": 0
+      },
+      "kv4": {
+        "accuracy": 0.0,
+        "goodput_per_min": 0.0,
+        "mean_completion_s": 8.062532774334008,
+        "peak_active_gib": 5.284171957522631,
+        "samples": 3,
+        "max_prompt_tokens": 319,
+        "max_queue": 4,
+        "errors": 0
+      },
+      "draft2": {
+        "accuracy": 1.0,
+        "goodput_per_min": 43.78723628708648,
+        "mean_completion_s": 3.474781493415018,
+        "peak_active_gib": 5.3113947585225105,
+        "samples": 3,
+        "max_prompt_tokens": 319,
+        "max_queue": 4,
+        "errors": 0
+      },
+      "batch4_chunk256": {
+        "accuracy": 1.0,
+        "goodput_per_min": 70.72895589471989,
+        "mean_completion_s": 3.4175461908319753,
+        "peak_active_gib": 5.55597972124815,
+        "samples": 3,
+        "max_prompt_tokens": 319,
+        "max_queue": 4,
+        "errors": 0
+      },
+      "batch4_chunk1024": {
+        "accuracy": 1.0,
+        "goodput_per_min": 70.44906530541623,
+        "mean_completion_s": 3.422671586916598,
+        "peak_active_gib": 5.530865114182234,
+        "samples": 3,
+        "max_prompt_tokens": 319,
+        "max_queue": 4,
+        "errors": 0
+      }
+    },
+    "solo_long": {
+      "serial": {
+        "accuracy": 0.6666666666666666,
+        "goodput_per_min": 11.12517473114118,
+        "mean_completion_s": 3.7455222776673813,
+        "peak_active_gib": 5.4790811613202095,
+        "samples": 3,
+        "max_prompt_tokens": 2793,
+        "max_queue": 1,
+        "errors": 0
+      },
+      "kv8": {
+        "accuracy": 0.6666666666666666,
+        "goodput_per_min": 9.999200752894453,
+        "mean_completion_s": 3.9938727086652457,
+        "peak_active_gib": 5.687096692621708,
+        "samples": 3,
+        "max_prompt_tokens": 2793,
+        "max_queue": 1,
+        "errors": 0
+      },
+      "kv4": {
+        "accuracy": 0.0,
+        "goodput_per_min": 0.0,
+        "mean_completion_s": 5.750885222664995,
+        "peak_active_gib": 5.644372083246708,
+        "samples": 3,
+        "max_prompt_tokens": 2793,
+        "max_queue": 1,
+        "errors": 0
+      },
+      "draft2": {
+        "accuracy": 0.6666666666666666,
+        "goodput_per_min": 10.934457778362523,
+        "mean_completion_s": 3.8156735136629627,
+        "peak_active_gib": 5.564540941268206,
+        "samples": 3,
+        "max_prompt_tokens": 2793,
+        "max_queue": 1,
+        "errors": 0
+      },
+      "batch4_chunk256": {
+        "accuracy": 0.6666666666666666,
+        "goodput_per_min": 10.98890168894561,
+        "mean_completion_s": 3.7320596246718196,
+        "peak_active_gib": 5.380072958767414,
+        "samples": 3,
+        "max_prompt_tokens": 2793,
+        "max_queue": 1,
+        "errors": 0
+      },
+      "batch4_chunk1024": {
+        "accuracy": 0.6666666666666666,
+        "goodput_per_min": 11.256589104785364,
+        "mean_completion_s": 3.6491204446744328,
+        "peak_active_gib": 5.646555293351412,
+        "samples": 3,
+        "max_prompt_tokens": 2793,
+        "max_queue": 1,
+        "errors": 0
+      }
+    },
+    "solo_short": {
+      "serial": {
+        "accuracy": 1.0,
+        "goodput_per_min": 35.34480826780851,
+        "mean_completion_s": 1.698206083330054,
+        "peak_active_gib": 5.280661948025227,
+        "samples": 3,
+        "max_prompt_tokens": 317,
+        "max_queue": 1,
+        "errors": 0
+      },
+      "kv8": {
+        "accuracy": 1.0,
+        "goodput_per_min": 34.60558378893843,
+        "mean_completion_s": 1.734466069668997,
+        "peak_active_gib": 5.280661948025227,
+        "samples": 3,
+        "max_prompt_tokens": 317,
+        "max_queue": 1,
+        "errors": 0
+      },
+      "kv4": {
+        "accuracy": 0.0,
+        "goodput_per_min": 0.0,
+        "mean_completion_s": 3.457249055665064,
+        "peak_active_gib": 5.280661948025227,
+        "samples": 3,
+        "max_prompt_tokens": 317,
+        "max_queue": 1,
+        "errors": 0
+      },
+      "draft2": {
+        "accuracy": 1.0,
+        "goodput_per_min": 43.84910727800013,
+        "mean_completion_s": 1.3693856250029057,
+        "peak_active_gib": 5.308388516306877,
+        "samples": 3,
+        "max_prompt_tokens": 317,
+        "max_queue": 1,
+        "errors": 0
+      },
+      "batch4_chunk256": {
+        "accuracy": 1.0,
+        "goodput_per_min": 34.321116209610985,
+        "mean_completion_s": 1.7384497083354897,
+        "peak_active_gib": 5.1973946914076805,
+        "samples": 3,
+        "max_prompt_tokens": 317,
+        "max_queue": 1,
+        "errors": 0
+      },
+      "batch4_chunk1024": {
+        "accuracy": 1.0,
+        "goodput_per_min": 35.27787774117496,
+        "mean_completion_s": 1.691429763668566,
+        "peak_active_gib": 5.280768983066082,
+        "samples": 3,
+        "max_prompt_tokens": 317,
+        "max_queue": 1,
+        "errors": 0
+      }
+    }
+  },
+  "eligible": {
+    "burst_long": [
+      "serial",
+      "kv8",
+      "draft2",
+      "batch4_chunk256",
+      "batch4_chunk1024"
+    ],
+    "burst_short": [
+      "serial",
+      "kv8",
+      "draft2",
+      "batch4_chunk256",
+      "batch4_chunk1024"
+    ],
+    "solo_long": [
+      "serial",
+      "kv8",
+      "draft2",
+      "batch4_chunk256",
+      "batch4_chunk1024"
+    ],
+    "solo_short": [
+      "serial",
+      "kv8",
+      "draft2",
+      "batch4_chunk256",
+      "batch4_chunk1024"
+    ]
+  },
+  "memory_ceiling_gib": 32.0,
+  "memory_margin": 1.15,
+  "scope": "Selection at drained-batch boundaries; fixed resident models; empirical soft admission guard.",
+  "environment_sha256": "4a961d34c275a8c1cce1fd755923a8592053565cdbe2a2028f02027f9127dc9f",
+  "calibration_episode_count": 72
+}

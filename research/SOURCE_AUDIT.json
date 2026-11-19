@@ -1,0 +1,45 @@
+{
+  "date": "2026-11-19",
+  "counts_before_deduplication": {
+    "general": 215,
+    "inference algorithms": 138,
+    "inference systems": 117
+  },
+  "unique_counts": {
+    "general": 215,
+    "inference": 258,
+    "social": 2
+  },
+  "unique_technical_sources": 473,
+  "all_unique_sources_including_social": 475,
+  "source_types": {
+    "repository technical README": 177,
+    "official model card": 18,
+    "primary technical paper": 20,
+    "research paper": 150,
+    "official technical documentation": 67,
+    "maintainer source code": 16,
+    "repository technical documentation": 22,
+    "primary issue and maintainer resolution": 1,
+    "social discussion": 1,
+    "primary merged implementation PR": 2,
+    "social experiment report": 1
+  },
+  "inspection_depths": {
+    "substantive section": 445,
+    "abstract": 21,
+    "full-text": 4,
+    "issue body and resolution timeline": 1,
+    "post body, linked primary PR and engagement": 1,
+    "PR design, reported benchmark table, review and follow-up timeline": 1,
+    "full design, performance, memory tradeoff, validation and merge status": 1,
+    "post body and engagement": 1
+  },
+  "duplicates_removed": [],
+  "evidence_issues": [],
+  "saved_content_hashes_verified": 475,
+  "hash_issues": [],
+  "structured_track_validation": "All three research-track JSON files passed the skill validator with 7/7 fields.",
+  "requirements_pass": true,
+  "method_note": "A source is a distinct technical document, not necessarily a paper or independent organization. Sources were inspected at the stated depth using HTTP text retrieval and selected browser checks. Search snippets and failed fetches are excluded. The two X posts are additional and do not count toward either technical-source threshold."
+}

@@ -1,0 +1,4 @@
+{
+  "status": "stopped_before_calibration",
+  "reason": "Startup incorrectly required perfect baseline model accuracy. A long-context warmup had a genuine field error. No calibration or held-out evaluation occurred. All failure traces retained."
+}

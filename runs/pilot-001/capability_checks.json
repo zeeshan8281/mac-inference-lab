@@ -1,0 +1,6 @@
+{
+  "greedy_draft_matches_serial": true,
+  "plain_batch_outputs_correct": true,
+  "quantized_cache_observed": true,
+  "real_batch_observed": true
+}

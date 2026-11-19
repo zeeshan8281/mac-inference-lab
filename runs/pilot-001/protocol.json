@@ -1,0 +1,73 @@
+{
+  "created_utc": "2026-11-19T11:00:32.092318+00:00",
+  "configurations": [
+    {
+      "name": "serial",
+      "mode": "serial",
+      "batch_size": 1,
+      "prefill_step": 512,
+      "kv_bits": null,
+      "draft_tokens": 0
+    },
+    {
+      "name": "kv8",
+      "mode": "serial",
+      "batch_size": 1,
+      "prefill_step": 512,
+      "kv_bits": 8,
+      "draft_tokens": 0
+    },
+    {
+      "name": "kv4",
+      "mode": "serial",
+      "batch_size": 1,
+      "prefill_step": 512,
+      "kv_bits": 4,
+      "draft_tokens": 0
+    },
+    {
+      "name": "draft2",
+      "mode": "serial",
+      "batch_size": 1,
+      "prefill_step": 512,
+      "kv_bits": null,
+      "draft_tokens": 2
+    },
+    {
+      "name": "batch4_chunk256",
+      "mode": "batch",
+      "batch_size": 4,
+      "prefill_step": 256,
+      "kv_bits": null,
+      "draft_tokens": 0
+    },
+    {
+      "name": "batch4_chunk1024",
+      "mode": "batch",
+      "batch_size": 4,
+      "prefill_step": 1024,
+      "kv_bits": null,
+      "draft_tokens": 0
+    }
+  ],
+  "calibration_reps": 3,
+  "test_reps": 8,
+  "fixture_sha256": "549b58560585cf4f5962bdeb50a90be97b5c6da53f4242400a77272893b8d675",
+  "code_sha256": {
+    "server.py": "79d7e4c8222a7ae7c3ec12ab70d46e7bcaacc18da08cb39052ca79e4462c36ca",
+    "mlx_backend.py": "e8f44a226c62bde0a38b3639552a211e07ed8454b7ad7fd006ca6176f83668f7",
+    "__init__.py": "9aa3c1d50072b4d156cda9152f247e5bb7381cb9c83a80d95e8edaeb3ad41ad2",
+    "core.py": "f40f0e52bc4558003c0d445f5782516b460511cf000bd0ebb071037c2a742c1e",
+    "cli.py": "3c483b6b68699687c02540bfeaf3d0377f727ec96e2471f563dc86068f424bab"
+  },
+  "memory_ceiling_gib": 32.0,
+  "max_hours": 4.0,
+  "objective": "Correct responses completed before the fixed per-profile deadline, per episode minute.",
+  "deadline_rule": "1.25 times each profile's serial warmup episode duration, minimum 2 seconds; frozen before calibration.",
+  "arrival_model": "Finite closed bursts: all requests queued together; queue time is included in TTFT and completion.",
+  "timing_scope": "Warm resident models; tokenization and allocator cache clearing excluded; all inference, within-burst queueing and stream generation included.",
+  "cache_policy": "Fresh request KV caches; allocator cache cleared between episodes; no prefix reuse.",
+  "policy_scope": "Configuration changes only at empty-engine batch boundaries; no mid-generation cache conversion.",
+  "test_selection": "Best fixed and per-state adaptive choices frozen from calibration; test scores are never used for policy selection.",
+  "analysis": "Pair fixed/adaptive by held-out profile and replicate, counterbalance order; bootstrap paired blocks within profile."
+}

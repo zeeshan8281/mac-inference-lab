@@ -1,0 +1,206 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "health",
+      "pass": true,
+      "status": 200
+    },
+    {
+      "name": "list_body",
+      "pass": true,
+      "status": 400,
+      "response": {
+        "error": "JSON body must be an object."
+      }
+    },
+    {
+      "name": "boolean_tokens",
+      "pass": true,
+      "status": 400,
+      "response": {
+        "error": "max_tokens must be an integer from 1 to 192, the calibrated output bound."
+      }
+    },
+    {
+      "name": "negative_budget",
+      "pass": true,
+      "status": 400,
+      "response": {
+        "error": "memory_budget_gib must be positive and no larger than the calibrated ceiling."
+      }
+    },
+    {
+      "name": "infeasible_budget",
+      "pass": true,
+      "status": 503,
+      "response": {
+        "error": "No calibrated configuration fits this queue, prompt length and soft memory budget."
+      }
+    },
+    {
+      "name": "uncalibrated_length",
+      "pass": true,
+      "status": 503,
+      "response": {
+        "error": "No calibrated configuration fits this queue, prompt length and soft memory budget."
+      }
+    },
+    {
+      "name": "single_generation",
+      "pass": true,
+      "status": 200,
+      "response": {
+        "id": "10c5ccf4-3487-4247-adb9-862245f2b413",
+        "text": "```json\n[1,2,3]\n```",
+        "configuration": "draft2",
+        "batch_size": 1,
+        "prompt_tokens": 32,
+        "output_tokens": 11,
+        "finish_reason": "stop",
+        "queue_wait_s": 0.045014749994152226,
+        "completion_s": 0.326239624992013,
+        "ttft_s": 0.2105546249949839,
+        "peak_active_gib": 5.0274414867162704,
+        "effective": {
+          "max_observed_decode_batch": 1,
+          "cache_types": [
+            "KVCache"
+          ],
+          "quantized_kv_start": null
+        },
+        "error": null
+      }
+    },
+    {
+      "name": "four_concurrent_requests",
+      "pass": true,
+      "records": [
+        {
+          "status": 200,
+          "response": {
+            "id": "d3b1b6e3-8ab0-49e6-9f8b-22a951f9fa7d",
+            "text": "[\n    {\"ref\":\"W00000133\",\"owner\":\"Noah\",\"units\":57,\"status\":\"open\"},\n    {\"ref\":\"W00000019\",\"owner\":\"Omar\",\"units\":68,\"status\":\"open\"},\n    {\"ref\":\"W00000425\",\"owner\":\"Noah\",\"units\":14,\"status\":\"open\"}\n]",
+            "configuration": "batch4_chunk256",
+            "batch_size": 4,
+            "prompt_tokens": 319,
+            "output_tokens": 86,
+            "finish_reason": "stop",
+            "queue_wait_s": 0.0009908329957397655,
+            "completion_s": 2.774032082990743,
+            "ttft_s": 0.8219295409944607,
+            "peak_active_gib": 5.5559797286987305,
+            "effective": {
+              "max_observed_decode_batch": 4,
+              "cache_types": [
+                "BatchKVCache (unquantized)"
+              ],
+              "quantized_kv_start": null
+            },
+            "error": null
+          },
+          "pass": true
+        },
+        {
+          "status": 200,
+          "response": {
+            "id": "d0b766e3-a47b-4105-a552-ae8b52c19fd2",
+            "text": "[\n    {\"ref\":\"W00100287\",\"owner\":\"Omar\",\"units\":53,\"status\":\"pending\"},\n    {\"ref\":\"W00100655\",\"owner\":\"Asha\",\"units\":1,\"status\":\"open\"},\n    {\"ref\":\"W00100446\",\"owner\":\"Omar\",\"units\":30,\"status\":\"open\"}\n]",
+            "configuration": "batch4_chunk256",
+            "batch_size": 4,
+            "prompt_tokens": 318,
+            "output_tokens": 85,
+            "finish_reason": "stop",
+            "queue_wait_s": 0.0013511249999282882,
+            "completion_s": 2.7528071249980712,
+            "ttft_s": 0.8222853329934878,
+            "peak_active_gib": 5.5559797286987305,
+            "effective": {
+              "max_observed_decode_batch": 4,
+              "cache_types": [
+                "BatchKVCache (unquantized)"
+              ],
+              "quantized_kv_start": null
+            },
+            "error": null
+          },
+          "pass": true
+        },
+        {
+          "status": 200,
+          "response": {
+            "id": "cafb8e5b-e22e-4b5b-a0f6-d7ec92af3c77",
+            "text": "[\n    {\"ref\":\"W00200140\",\"owner\":\"Lina\",\"units\":62,\"status\":\"open\"},\n    {\"ref\":\"W00200052\",\"owner\":\"Iris\",\"units\":30,\"status\":\"pending\"},\n    {\"ref\":\"W00200338\",\"owner\":\"Maya\",\"units\":46,\"status\":\"pending\"}\n]",
+            "configuration": "batch4_chunk256",
+            "batch_size": 4,
+            "prompt_tokens": 319,
+            "output_tokens": 86,
+            "finish_reason": "stop",
+            "queue_wait_s": 0.0009041250013979152,
+            "completion_s": 2.773956332996022,
+            "ttft_s": 0.821843291996629,
+            "peak_active_gib": 5.5559797286987305,
+            "effective": {
+              "max_observed_decode_batch": 4,
+              "cache_types": [
+                "BatchKVCache (unquantized)"
+              ],
+              "quantized_kv_start": null
+            },
+            "error": null
+          },
+          "pass": true
+        },
+        {
+          "status": 200,
+          "response": {
+            "id": "feb6bcbd-280c-48d5-bf95-31709e60313a",
+            "text": "[\n    {\"ref\":\"W00300642\",\"owner\":\"Iris\",\"units\":61,\"status\":\"pending\"},\n    {\"ref\":\"W00300285\",\"owner\":\"Noah\",\"units\":47,\"status\":\"closed\"},\n    {\"ref\":\"W00300758\",\"owner\":\"Iris\",\"units\":10,\"status\":\"closed\"}\n]",
+            "configuration": "batch4_chunk256",
+            "batch_size": 4,
+            "prompt_tokens": 318,
+            "output_tokens": 86,
+            "finish_reason": "stop",
+            "queue_wait_s": 0.0011685409990604967,
+            "completion_s": 2.774197124002967,
+            "ttft_s": 0.8221064579993254,
+            "peak_active_gib": 5.5559797286987305,
+            "effective": {
+              "max_observed_decode_batch": 4,
+              "cache_types": [
+                "BatchKVCache (unquantized)"
+              ],
+              "quantized_kv_start": null
+            },
+            "error": null
+          },
+          "pass": true
+        }
+      ]
+    },
+    {
+      "name": "healthy_after_errors_and_generation",
+      "pass": true,
+      "status": 200,
+      "response": {
+        "ready": true,
+        "completed": 10,
+        "selected_counts": {
+          "draft2": 2,
+          "batch4_chunk256": 2
+        },
+        "startup_error": null,
+        "queue_depth": 0,
+        "policy_choices": {
+          "burst_long": "batch4_chunk256",
+          "burst_short": "batch4_chunk256",
+          "solo_long": "batch4_chunk256",
+          "solo_short": "draft2"
+        },
+        "best_fixed": "batch4_chunk256",
+        "policy_sha256": "88693c8b9680e31bb165fd4c8110b389f4e034bef222b80b73a17275a18ca7ab",
+        "scope": "Selection at drained-batch boundaries; fixed resident models; empirical soft admission guard."
+      }
+    }
+  ]
+}

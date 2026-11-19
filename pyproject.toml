@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mac-inference-lab"
+version = "0.1.0"
+description = "Measured MLX configuration selection with a reproducible held-out pilot"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+dependencies = [
+    "mlx==0.32.4",
+    "mlx-lm==0.32.2",
+    "transformers==5.23.0",
+    "numpy==2.5.5",
+]
+
+[project.optional-dependencies]
+plot = ["matplotlib==3.11.2"]
+
+[project.scripts]
+mac-inference-lab = "inference_lab.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["inference_lab*"]

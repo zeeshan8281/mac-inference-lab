@@ -1,0 +1,13 @@
+Executed with the recorded MLX Python environment from the publication checkout.
+Command: python -m unittest discover -s tests -v
+
+test_calibration_does_not_read_test_results (test_core.ResearchContracts.test_calibration_does_not_read_test_results) ... ok
+test_deadline_failures_stay_in_denominator (test_core.ResearchContracts.test_deadline_failures_stay_in_denominator) ... ok
+test_exact_scoring_rejects_near_misses_and_duplicate_keys (test_core.ResearchContracts.test_exact_scoring_rejects_near_misses_and_duplicate_keys) ... ok
+test_fixture_splits_are_disjoint (test_core.ResearchContracts.test_fixture_splits_are_disjoint) ... ok
+test_unsupported_combinations_rejected_before_gpu_work (test_core.ResearchContracts.test_unsupported_combinations_rejected_before_gpu_work) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.850s
+
+OK

@@ -1,0 +1,115 @@
+{
+  "best_fixed": "batch4_chunk256",
+  "choices": {
+    "burst_long": "batch4_chunk256",
+    "burst_short": "batch4_chunk256",
+    "solo_long": "batch4_chunk256",
+    "solo_short": "draft2"
+  },
+  "profiles": {
+    "solo_short": {
+      "fixed": {
+        "episodes": 8,
+        "requests": 8,
+        "correct": 8,
+        "on_time_correct": 8,
+        "mean_goodput_per_min": 33.530862835042925,
+        "mean_completion_s": 1.780069270875174,
+        "mean_ttft_s": 0.3828706196272833,
+        "peak_active_gib": 5.1973946914076805
+      },
+      "adaptive": {
+        "episodes": 8,
+        "requests": 8,
+        "correct": 8,
+        "on_time_correct": 8,
+        "mean_goodput_per_min": 37.86110345474077,
+        "mean_completion_s": 1.5957705156270094,
+        "mean_ttft_s": 0.4343782604992157,
+        "peak_active_gib": 5.310524761676788
+      }
+    },
+    "solo_long": {
+      "fixed": {
+        "episodes": 8,
+        "requests": 8,
+        "correct": 7,
+        "on_time_correct": 6,
+        "mean_goodput_per_min": 10.887701996208905,
+        "mean_completion_s": 4.191951682376384,
+        "mean_ttft_s": 2.7048251874985,
+        "peak_active_gib": 5.380072958767414
+      },
+      "adaptive": {
+        "episodes": 8,
+        "requests": 8,
+        "correct": 7,
+        "on_time_correct": 6,
+        "mean_goodput_per_min": 10.840688769494204,
+        "mean_completion_s": 4.191854281249107,
+        "mean_ttft_s": 2.7045238749997225,
+        "peak_active_gib": 5.380072958767414
+      }
+    },
+    "burst_short": {
+      "fixed": {
+        "episodes": 8,
+        "requests": 32,
+        "correct": 32,
+        "on_time_correct": 32,
+        "mean_goodput_per_min": 63.10306487429036,
+        "mean_completion_s": 3.8128833828436655,
+        "mean_ttft_s": 1.2278680988742963,
+        "peak_active_gib": 5.55597972124815
+      },
+      "adaptive": {
+        "episodes": 8,
+        "requests": 32,
+        "correct": 32,
+        "on_time_correct": 32,
+        "mean_goodput_per_min": 63.7002431445131,
+        "mean_completion_s": 3.7630265444031465,
+        "mean_ttft_s": 1.2258236902780482,
+        "peak_active_gib": 5.55597972124815
+      }
+    },
+    "burst_mixed": {
+      "fixed": {
+        "episodes": 8,
+        "requests": 32,
+        "correct": 30,
+        "on_time_correct": 30,
+        "mean_goodput_per_min": 26.18974824535025,
+        "mean_completion_s": 8.498192621216276,
+        "mean_ttft_s": 4.3288875430926055,
+        "peak_active_gib": 5.991752592846751
+      },
+      "adaptive": {
+        "episodes": 8,
+        "requests": 32,
+        "correct": 30,
+        "on_time_correct": 30,
+        "mean_goodput_per_min": 26.151548358568487,
+        "mean_completion_s": 8.509006609406242,
+        "mean_ttft_s": 4.318766459656217,
+        "peak_active_gib": 5.9917525965720415
+      }
+    }
+  },
+  "paired_result": {
+    "blocks": 32,
+    "fixed_mean_goodput": 33.42784448772311,
+    "adaptive_mean_goodput": 34.63839593182914,
+    "difference_goodput": 1.2105514441060308,
+    "relative_change_percent": 3.621386489788847,
+    "difference_95ci": [
+      -0.27207736455051507,
+      2.7209418189687797
+    ],
+    "scope": "Exploratory stratified paired bootstrap over controlled workload blocks; not a claim about arbitrary workloads."
+  },
+  "test_errors": [],
+  "wall_seconds": 783.5989314170001,
+  "total_model_requests": 374,
+  "total_generated_tokens": 35452
+}

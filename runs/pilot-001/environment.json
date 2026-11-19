@@ -1,0 +1,107 @@
+{
+  "versions": {
+    "mlx": "0.32.4",
+    "mlx-lm": "0.32.2",
+    "transformers": "5.23.0",
+    "numpy": "2.5.5"
+  },
+  "device": {
+    "device_name": "Apple M5 Pro",
+    "max_recommended_working_set_size": 40200896512,
+    "memory_size": 51539607552,
+    "architecture": "applegpu_g17s",
+    "max_buffer_length": 30150672384,
+    "resource_limit": 499000
+  },
+  "target_path": "/Users/zeeshan8281/Documents/Codex/2026-11-19/can-you-x20/work/models/qwen-coder-7b",
+  "draft_path": "/Users/zeeshan8281/Documents/Codex/2026-11-19/can-you-x20/work/models/qwen-coder-1.5b",
+  "model_files": {
+    "target": {
+      "added_tokens.json": {
+        "bytes": 605,
+        "sha256": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b"
+      },
+      "config.json": {
+        "bytes": 787,
+        "sha256": "08762352ba9fded858f24bdd7b8d2fe61aabe7bce1dfdb663db242d574c3e678"
+      },
+      "model.safetensors": {
+        "bytes": 4284346255,
+        "sha256": "56a3d94706833f753e6c6b47ea57af8ef638cd8cc1d74eca1142ba640b26060e"
+      },
+      "model.safetensors.index.json": {
+        "bytes": 51711,
+        "sha256": "23cd562592dd96686d2e799eb02e4b578a4038b6045eaefe860d270cc060e24f"
+      },
+      "special_tokens_map.json": {
+        "bytes": 613,
+        "sha256": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd"
+      },
+      "tokenizer.json": {
+        "bytes": 7031673,
+        "sha256": "a8506e7111b80c6d8635951a02eab0f4e1a8e4e5772da83846579e97b16f61bf"
+      },
+      "tokenizer_config.json": {
+        "bytes": 7308,
+        "sha256": "f7c61e32b7a17d19bf8e7037dcb74079a833e53ea9801f24008cac68458f03b7"
+      },
+      "vocab.json": {
+        "bytes": 2776833,
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      }
+    },
+    "draft": {
+      "added_tokens.json": {
+        "bytes": 605,
+        "sha256": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b"
+      },
+      "config.json": {
+        "bytes": 785,
+        "sha256": "0708e236aa7b7db3c01bf8a46200e1a92d57f20fa668a7c430154bd6a21cdba5"
+      },
+      "model.safetensors": {
+        "bytes": 868628559,
+        "sha256": "daeab4764fb420d161721791cf2e509e2de81a7af4223646e7bed2bf82c57b58"
+      },
+      "model.safetensors.index.json": {
+        "bytes": 51569,
+        "sha256": "6b98634d5044f0e2ad45228a374f8445904e571f1082392d08a6ce54f5d517ca"
+      },
+      "special_tokens_map.json": {
+        "bytes": 613,
+        "sha256": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd"
+      },
+      "tokenizer.json": {
+        "bytes": 7031673,
+        "sha256": "a8506e7111b80c6d8635951a02eab0f4e1a8e4e5772da83846579e97b16f61bf"
+      },
+      "tokenizer_config.json": {
+        "bytes": 7228,
+        "sha256": "dced901d401aa828f313a2baec70d0ce164653285812237b5285c7efd5b9e760"
+      },
+      "vocab.json": {
+        "bytes": 2776833,
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      }
+    }
+  },
+  "tokenizer_mapping_sha256": "b7a0d4b412fcb6918cf000fd132caad4f953b705c5922747f499e0f60ebc1615",
+  "actual_vocab_size": 151665,
+  "eos_ids": [
+    151643,
+    151645
+  ],
+  "resident_active_gib": 4.804754264652729,
+  "generation_source_sha256": "9d46803799f99d6fc7c35fff2d4357c79b1a25ae98cc63efeaaebeb50a7b5f33",
+  "decoding": "greedy; unused padded vocabulary rows masked in every configuration",
+  "model_residency": "Target and draft remain resident for all comparisons, including non-draft baselines.",
+  "capabilities": {
+    "serial": true,
+    "serial_kv4_kv8": true,
+    "serial_greedy_speculation": true,
+    "batch_plain": true,
+    "batch_quantized_kv": false,
+    "batch_speculation": false,
+    "unsupported_reason": "Installed BatchGenerator API accepts neither kv_bits nor draft_model; combinations are rejected, never silently emulated."
+  }
+}

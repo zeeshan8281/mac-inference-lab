@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+build/
+dist/
+models/
+*.safetensors
+.DS_Store
+.env
+.env.*

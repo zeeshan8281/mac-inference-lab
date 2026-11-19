@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "errors": [],
+  "calibration_and_test_requests_rescored": 340,
+  "paired_held_out_blocks": 32,
+  "phase_episode_counts": {
+    "warmup": 6,
+    "deadline": 4,
+    "calibration": 72,
+    "test": 64
+  },
+  "frozen_inputs_and_code_snapshot_verified": true,
+  "scope": "Independent fixture reconstruction, scoring, timestamp arithmetic, policy choices and file-hash checks. Does not independently reproduce GPU execution."
+}

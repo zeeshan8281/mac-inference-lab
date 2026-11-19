@@ -1,0 +1,9 @@
+{
+  "prepared_utc": "2026-11-19T11:11:29.222900+00:00",
+  "author_github": "zeeshan8281",
+  "repository": "https://github.com/zeeshan8281/mac-inference-lab",
+  "platform": "macOS-27.2.1-arm64-arm-64bit",
+  "python_runtime": "3.12",
+  "scope": "New Mac Inference Lab project; source, raw pilot traces, diagnostics and research bibliography. Model weights and environments are separate downloads.",
+  "run_source_policy": "Frozen code_snapshot directories preserve exactly the implementation that generated each run. Packaging, plotting, audit and smoke-test scripts are maintained outside those snapshots."
+}
